@@ -24,7 +24,7 @@ export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ```
 **Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
 
-Inicialmente faça o clone do projeto [**Julia**](https://julialang.org/) no GitHub. Dessa forma, com o git instalado e configurado, faça:
+Inicialmente faça o clone do projeto [**Julia**](https://julialang.org/) no [**GitHub**](https://github.com/JuliaLang/julia/blob/v1.1.0/README.md). Dessa forma, com o git instalado e configurado, faça:
 
 ```
 cd ~/Downloads/ && git clone git://github.com/JuliaLang/julia.git
