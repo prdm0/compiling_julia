@@ -31,12 +31,12 @@ cd ~/Downloads/ && git clone git://github.com/JuliaLang/julia.git
 cd julia
 ```
 
-Após o download de todos os arquivos do projeto [**Julia**](https://julialang.org/) ter sido clonado para o computador, vá para a versão que deseja compilar, por exemplo a versão **v1.1.0**. Para conhecer as versões, liste todas as tags das versões da linguagem do projeto clonado. 
+Após o download de todos os arquivos do projeto [**Julia**](https://julialang.org/) ter sido clonado para o computador, vá para a versão que deseja compilar, por exemplo a versão **v1.1.0**. Para conhecer as versões, liste todas as tags das versões da linguagem do projeto clonado (`git tag -l`). 
 
 ```
 git tag -l
 git checkout v1.1.0
-make -j 8 -L/opt/OpenBLAS/lib/ 
+make -j 8 -L/opt/OpenBLAS/lib/ -I/opt/OpenBLAs/include/
 ```
 
 
