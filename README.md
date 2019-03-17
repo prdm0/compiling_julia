@@ -27,14 +27,16 @@ export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 Inicialmente faça o clone do projeto **Julia** no GitHub. Dessa forma, com o git instalado e configurado, faça:
 
 ```
-cd ~/Downloads/
-git clone git://github.com/JuliaLang/julia.git
+cd ~/Downloads/ && git clone git://github.com/JuliaLang/julia.git
 cd julia
 ```
 
-Após o download de todos os arquivos do projeto **Julia** ter sido clonado para o computador, vá para a versão que deseja compilar. Para conhecer as versões, liste todas as tags das versões da linguagem. 
+Após o download de todos os arquivos do projeto **Julia** ter sido clonado para o computador, vá para a versão que deseja compilar, por exemplo a versão **v1.1.0**. Para conhecer as versões, liste todas as tags das versões da linguagem do projeto clonado. 
 
 ```
 git tag -l
+git checkout v1.1.0
+make -j 8 -L/opt/OpenBLAS/lib/ 
 ```
+
 
