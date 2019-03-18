@@ -10,7 +10,6 @@ tar -zxvf OpenBLAS*
 cd OpenBLAs*
 make -j $nproc
 sudo make install
-export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ```
 or
 
@@ -19,8 +18,6 @@ git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
 make -j $nproc
 sudo make install
-export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
-
 ```
 **Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
 
