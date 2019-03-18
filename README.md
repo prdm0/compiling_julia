@@ -33,9 +33,16 @@ Após o download de todos os arquivos do projeto [**Julia**](https://julialang.o
 ```
 git tag -l
 git checkout v1.1.0
-echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc
-export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
-make -j 8
 ```
 
+Posteriormente, faça com que a biblioteca [**OpenBLAS**](https://www.openblas.net/) do diretório `/opt/OpenBLAS/lib/` seja adicionada na variável ambiente  `LD_LIBRARY_PATH`.  No Linux, a variável de ambiente `LD_LIBRARY_PATH` é um conjunto de diretórios separados por dois pontos onde as bibliotecas devem ser procuradas primeiro, antes do conjunto padrão de diretórios. Isso fará com que a compilação de [**Julia**](https://julialang.org/) considere a biblioteca [**OpenBLAS**](https://www.openblas.net/) do diretório `/opt/OpenBLAS/lib/`.
 
+```
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc
+export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
+```
+Agora, dentro do diretório clonado de [**Julia**](https://julialang.org/), proceda a compilação fazendo:
+
+```
+make -j 8
+```
