@@ -33,6 +33,7 @@ Após o download de todos os arquivos do projeto [**Julia**](https://julialang.o
 ```
 git tag -l
 git checkout v1.1.0
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 make -j 8
 ```
