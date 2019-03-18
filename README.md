@@ -41,7 +41,7 @@ Posteriormente, faça com que a biblioteca [**OpenBLAS**](https://www.openblas.n
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ```
-Agora, dentro do diretório clonado de [**Julia**](https://julialang.org/), proceda a compilação fazendo:
+Agora, dentro do diretório clonado de [**Julia**](https://julialang.org/), sob a versão de interesse, proceda a compilação fazendo:
 
 ```
 make -j $nproc
