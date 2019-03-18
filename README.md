@@ -44,5 +44,5 @@ export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 Agora, dentro do diretório clonado de [**Julia**](https://julialang.org/), proceda a compilação fazendo:
 
 ```
-make -j 8
+make -j $nproc
 ```
