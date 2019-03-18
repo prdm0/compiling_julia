@@ -21,27 +21,27 @@ sudo make install
 ```
 **Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
 
-Inicialmente faça o clone do projeto [**Julia**](https://julialang.org/) no [**GitHub**](https://github.com/JuliaLang). Dessa forma, com o git instalado e configurado, faça:
+Initially do the [**Julia**](https://julialang.org/)  project clone on [**GitHub**](git://github.com/JuliaLang). That way, with git installed and configured, do:
 
 ```
 cd ~/Downloads/ && git clone git://github.com/JuliaLang/julia.git
 cd julia
 ```
 
-Após o download de todos os arquivos do projeto [**Julia**](https://julialang.org/) ter sido clonado para o computador, vá para a versão que deseja compilar, por exemplo a versão **v1.1.0**. Para conhecer as versões, liste todas as tags das versões da linguagem do projeto clonado (`git tag -l`). 
+After downloading all the project files [**Julia**] (https://julialang.org/) cloned to the computer, go to the version you want to compile, for example the version **v1.1.0**. To know the versions, list all the tags of the language versions of the cloned project (`git tag -l`).
 
 ```
 git tag -l
 git checkout v1.1.0
 ```
 
-Posteriormente, faça com que a biblioteca [**OpenBLAS**](https://www.openblas.net/) do diretório `/opt/OpenBLAS/lib/` seja adicionada na variável ambiente  `LD_LIBRARY_PATH`.  No Linux, a variável de ambiente `LD_LIBRARY_PATH` é um conjunto de diretórios separados por dois pontos onde as bibliotecas devem ser procuradas primeiro, antes do conjunto padrão de diretórios. Isso fará com que a compilação de [**Julia**](https://julialang.org/) considere a biblioteca [**OpenBLAS**](https://www.openblas.net/) do diretório `/opt/OpenBLAS/lib/`.
+Subsequently, have the [**OpenBLAS**] (https://www.openblas.net/) library in the `/opt/OpenBLAS/lib/` directory be added to the environment variable `LD_LIBRARY_PATH`. In Linux, the `LD_LIBRARY_PATH` environment variable is a set of colon-separated directories where libraries should be searched first, before the default set of directories. This will cause the [** Julia **] compilation (https://julialang.org/) to consider the [**OpenBLAS**] library (https://www.openblas.net/) of the `/opt/OpenBLAS/lib/ `.
 
 ```
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ```
-Agora, dentro do diretório clonado de [**Julia**](https://julialang.org/), sob a versão de interesse, proceda a compilação fazendo:
+Now, under the cloned directory of [**Julia**] (https://julialang.org/), under the version of interest, compile the language doing:
 
 ```
 make -j $nproc
