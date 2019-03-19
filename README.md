@@ -67,9 +67,9 @@ make -j $nproc
 
 ## Configurando sem criar o arquivo `Make.user`:
 
-- Para verificar o conteúdo da variável `LD_LIBRARY_PATH` faça `echo $LD_LIBRARY_PATH`.
-- Se o diretório de onde foi instalado biblioteca OpenBLAS não encontra-se presente, faça `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/`.
-- É possível sempre iniciar uma seção do terminal bash com `LD_LIBRARY_PATH` contendo o caminho de instalação da biblioteca OpenBLAS. Para isso, faça: `echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc`.
-- Faça `OPENBLAS_DYNAMIC_ARCH=0`e `MARCH=native` diretamente no arquivo `Make.inc`.
+1. Para verificar o conteúdo da variável `LD_LIBRARY_PATH` faça `echo $LD_LIBRARY_PATH`.
+2. Se o diretório de onde foi instalado biblioteca OpenBLAS não encontra-se presente, faça `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/`.
+3. É possível sempre iniciar uma seção do terminal bash com `LD_LIBRARY_PATH` contendo o caminho de instalação da biblioteca OpenBLAS. Para isso, faça: `echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc`. Esse passo não é necessário caso tenha realizado o passo 2. Aconselha-se o uso do passo 2 ao invés de alterar o conteúdo do arquivo `~/.bashrc`.
+4. Faça `OPENBLAS_DYNAMIC_ARCH=0` e `MARCH=native` diretamente no arquivo `Make.inc`.
 
 
