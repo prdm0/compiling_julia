@@ -65,7 +65,7 @@ cd ~/Downloads/julia
 make -j $nproc
 ```
 
-## Configurando sem criar o arquivo `Make.user`:
+#### Configurando sem criar o arquivo `Make.user`:
 
 1. Para verificar o conteúdo da variável `LD_LIBRARY_PATH` faça `echo $LD_LIBRARY_PATH`.
 2. Se o diretório de onde foi instalado biblioteca OpenBLAS não encontra-se presente, faça `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/`.
