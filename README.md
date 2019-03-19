@@ -51,8 +51,7 @@ Now, under the cloned directory of [**Julia**](https://julialang.org/), under th
 make -j $nproc
 ```
 
-
-**Note**: Outros caminhos de bibliotecas de interesse podem ser adicionador ao arquivo `Make.user` fazendo `LDFLAGS+=-Wl,-rpath,/opt/gcc8/lib64/`
+**Note**: Outros caminhos de bibliotecas de interesse podem ser adicionador ao arquivo `Make.user` fazendo `LDFLAGS+=-Wl,-rpath,/path/of/library`
 
 Caso o o arquivo `Make.user` não seja criado, faça:
 
