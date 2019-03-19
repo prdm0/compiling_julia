@@ -69,6 +69,6 @@ make -j $nproc
 1. To check the contents of the `LD_LIBRARY_PATH` variable, do `echo $LD_LIBRARY_PATH`.
 2. If the directory where the [**OpenBLAS**](https://www.openblas.net/) library was installed is not present, do `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/`.
 3. You can always start a bash terminal section with `LD_LIBRARY_PATH` containing the library installation path [**OpenBLAS**](https://www.openblas.net/). To do this, do: `echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc`. This step is not necessary if you performed step 2. You are advised to use step 2 instead than changing the contents of the `~/.bashrc` file.
-4. Make `OPENBLAS_DYNAMIC_ARCH=0` and` MARCH=native` directly in the `Make.inc` file.
+4. Make `OPENBLAS_DYNAMIC_ARCH=0` and `MARCH=native` directly in the `Make.inc` file.
 
 
