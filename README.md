@@ -37,7 +37,7 @@ git checkout v1.1.0
 
 Subsequently, have the [**OpenBLAS**](https://www.openblas.net/) library in the `/opt/OpenBLAS/lib/` directory be added to the environment variable `LD_LIBRARY_PATH`. In Linux, the `LD_LIBRARY_PATH` environment variable is a set of colon-separated directories where libraries should be searched first, before the default set of directories. This will cause the [**Julia**](https://julialang.org/) compilation  to consider the [**OpenBLAS**](https://www.openblas.net/) library of the `/opt/OpenBLAS/lib/ `.
 
-No diretório colonado, crie o arquivo `Make.user` com o conteúdo abaixo:
+In the cloned directory, create the `Make.user` file with the following content:
 
 ```
 USE_SYSTEM_XXX=1
@@ -55,8 +55,7 @@ LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib/
 OPENBLAS_DYNAMIC_ARCH=0" > Make.user
 ```
 
-**Note**: Outros caminhos de bibliotecas de interesse podem ser adicionador ao arquivo `Make.user` fazendo `LDFLAGS+=-Wl,-rpath,/path/of/library`
-
+**Note**: Other paths of libraries of interest can be added to the `Make.user` file by doing` LDFLAGS+=- Wl,-rpath,/path/of/library`.
 
 Now, under the cloned directory of [**Julia**](https://julialang.org/), under the version of interest, compile the language doing:
 
@@ -65,11 +64,11 @@ cd ~/Downloads/julia
 make -j $nproc
 ```
 
-#### Configurando sem criar o arquivo `Make.user`:
+#### Configuring without creating the `Make.user` file:
 
-1. Para verificar o conteúdo da variável `LD_LIBRARY_PATH` faça `echo $LD_LIBRARY_PATH`.
-2. Se o diretório de onde foi instalado biblioteca OpenBLAS não encontra-se presente, faça `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/`.
-3. É possível sempre iniciar uma seção do terminal bash com `LD_LIBRARY_PATH` contendo o caminho de instalação da biblioteca OpenBLAS. Para isso, faça: `echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc`. Esse passo não é necessário caso tenha realizado o passo 2. Aconselha-se o uso do passo 2 ao invés de alterar o conteúdo do arquivo `~/.bashrc`.
-4. Faça `OPENBLAS_DYNAMIC_ARCH=0` e `MARCH=native` diretamente no arquivo `Make.inc`.
+1. To check the contents of the `LD_LIBRARY_PATH` variable, do `echo $LD_LIBRARY_PATH`.
+2. If the directory where the [**OpenBLAS**](https://www.openblas.net/) library was installed is not present, do `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/`.
+3. You can always start a bash terminal section with `LD_LIBRARY_PATH` containing the library installation path [**OpenBLAS**](https://www.openblas.net/). To do this, do: `echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc`. This step is not necessary if you performed step 2. You are advised to use step 2 instead than changing the contents of the `~/.bashrc` file.
+4. Make `OPENBLAS_DYNAMIC_ARCH=0` and` MARCH=native` directly in the `Make.inc` file.
 
 
