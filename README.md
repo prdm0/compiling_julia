@@ -45,6 +45,12 @@ MARCH=native
 LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib/
 OPENBLAS_DYNAMIC_ARCH=0
 ```
+Now, under the cloned directory of [**Julia**](https://julialang.org/), under the version of interest, compile the language doing:
+
+```
+make -j $nproc
+```
+
 
 **Note**: Outros caminhos de bibliotecas de interesse podem ser adicionador ao arquivo `Make.user` fazendo `LDFLAGS+=-Wl,-rpath,/opt/gcc8/lib64/`
 
@@ -55,8 +61,4 @@ Caso o o arquivo `Make.user` não seja criado, faça:
 - É possível sempre iniciar uma seção do terminal bash com `LD_LIBRARY_PATH` contendo o caminho de instalação da biblioteca OpenBLAS. Para isso, faça: `echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc`.
 - Faça `OPENBLAS_DYNAMIC_ARCH=0` diretamente no arquivo `Make.inc`.
 
-Now, under the cloned directory of [**Julia**](https://julialang.org/), under the version of interest, compile the language doing:
 
-```
-make -j $nproc
-```
