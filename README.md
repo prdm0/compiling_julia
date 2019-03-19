@@ -55,7 +55,7 @@ LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib/
 OPENBLAS_DYNAMIC_ARCH=0" > Make.user
 ```
 
-**Note**: Other paths of libraries of interest can be added to the `Make.user` file by doing` LDFLAGS+=- Wl,-rpath,/path/of/library`.
+**Note**: Other paths of libraries of interest can be added to the `Make.user` file by doing `LDFLAGS+=- Wl,-rpath,/path/of/library`.
 
 Now, under the cloned directory of [**Julia**](https://julialang.org/), under the version of interest, compile the language doing:
 
