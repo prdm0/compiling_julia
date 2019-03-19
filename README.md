@@ -21,7 +21,7 @@ sudo make install
 ```
 **Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
 
-Initially do the [**Julia**](https://julialang.org/)  project clone on [**GitHub**](git://github.com/JuliaLang). That way, with git installed and configured, do:
+Initially do the [**Julia**](https://julialang.org/)  project clone on [**GitHub**](https://github.com/JuliaLang/julia). That way, with git installed and configured, do:
 
 ```
 cd ~/Downloads/ && git clone git://github.com/JuliaLang/julia.git
