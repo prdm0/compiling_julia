@@ -8,7 +8,7 @@ Initially download the [**Julia**](https://julialang.org/) and [**OpenBLAS**](ht
 ```
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
-make -j $nproc
+make -j $(nproc)
 sudo make install
 ```
 or
@@ -16,7 +16,7 @@ or
 ```
 git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
-make -j $nproc
+make -j $(nproc)
 sudo make install
 ```
 **Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
@@ -61,7 +61,7 @@ Now, under the cloned directory of [**Julia**](https://julialang.org/), under th
 
 ```
 cd ~/Downloads/julia
-make -j $nproc
+make -j $(nproc)
 ```
 
 #### Configuring without creating the `Make.user` file:
