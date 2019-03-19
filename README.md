@@ -70,6 +70,6 @@ Caso o o arquivo `Make.user` não seja criado, faça:
 - Para verificar o conteúdo da variável `LD_LIBRARY_PATH` faça `echo $LD_LIBRARY_PATH`.
 - Se o diretório de onde foi instalado biblioteca OpenBLAS não encontra-se presente, faça `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/`.
 - É possível sempre iniciar uma seção do terminal bash com `LD_LIBRARY_PATH` contendo o caminho de instalação da biblioteca OpenBLAS. Para isso, faça: `echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc`.
-- Faça `OPENBLAS_DYNAMIC_ARCH=0` diretamente no arquivo `Make.inc`.
+- Faça `OPENBLAS_DYNAMIC_ARCH=0`e `MARCH=native` diretamente no arquivo `Make.inc`.
 
 
