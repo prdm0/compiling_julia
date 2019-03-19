@@ -41,10 +41,9 @@ No diretório colonado, crie o arquivo `Make.user` com o conteúdo abaixo:
 
 ```
 USE_SYSTEM_XXX=1
-LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib/
-OPENBLAS_TARGET_ARCH=NEHALEM
-OPENBLAS_DYNAMIC_ARCH=0
 MARCH=native
+LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib/
+OPENBLAS_DYNAMIC_ARCH=0
 ```
 
 **Note**: Outros caminhos de bibliotecas de interesse podem ser adicionador ao arquivo `Make.user` fazendo `LDFLAGS+=-Wl,-rpath,/opt/gcc8/lib64/`
@@ -54,7 +53,7 @@ Caso o o arquivo `Make.user` não seja criado, faça:
 - Para verificar o conteúdo da variável `LD_LIBRARY_PATH` faça `echo $LD_LIBRARY_PATH`.
 - Se o diretório de onde foi instalado biblioteca OpenBLAS não encontra-se presente, faça `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/`.
 - É possível sempre iniciar uma seção do terminal bash com `LD_LIBRARY_PATH` contendo o caminho de instalação da biblioteca OpenBLAS. Para isso, faça: `echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc`.
-- Altere as variáveis `OPENBLAS_TARGET_ARCH=NEHALEM` e `OPENBLAS_DYNAMIC_ARCH=0` diretamente no arquivo `Make.inc`.
+- Faça `OPENBLAS_DYNAMIC_ARCH=0` diretamente no arquivo `Make.inc`.
 
 Now, under the cloned directory of [**Julia**](https://julialang.org/), under the version of interest, compile the language doing:
 
