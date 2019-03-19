@@ -45,13 +45,25 @@ MARCH=native
 LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib/
 OPENBLAS_DYNAMIC_ARCH=0
 ```
-Now, under the cloned directory of [**Julia**](https://julialang.org/), under the version of interest, compile the language doing:
+or
 
 ```
-make -j $nproc
+cd ~/Downloads/julia
+echo "USE_SYSTEM_XXX=1
+MARCH=native
+LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib/
+OPENBLAS_DYNAMIC_ARCH=0" > Make.user
 ```
 
 **Note**: Outros caminhos de bibliotecas de interesse podem ser adicionador ao arquivo `Make.user` fazendo `LDFLAGS+=-Wl,-rpath,/path/of/library`
+
+
+Now, under the cloned directory of [**Julia**](https://julialang.org/), under the version of interest, compile the language doing:
+
+```
+cd ~/Downloads/julia
+make -j $nproc
+```
 
 Caso o o arquivo `Make.user` não seja criado, faça:
 
