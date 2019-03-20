@@ -2,6 +2,8 @@
 
 **DEPENDENCES**: git, make, cmake, gcc, gcc-fortran.
 
+**Important**: I'll be at all times assuming that the project [**Julia**](https://julialang.org/) has been cloned into the directory `~/Downloads`.
+
 **Compiling OpenBLAS**
 
 Initially download the [**Julia**](https://julialang.org/) and [**OpenBLAS**](https://www.openblas.net/) (**Open** Optimized **BLAS** Library) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
