@@ -7,7 +7,9 @@
 ## Compiling OpenBLAS
 
 Initially download the [**Julia**](https://julialang.org/) and [**OpenBLAS**](https://www.openblas.net/) (**Open** Optimized **BLAS** Library) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
+
 ```
+cd ~/Downloads
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
 make -j $(nproc)
@@ -16,6 +18,7 @@ sudo make install
 or
 
 ```
+cd ~/Downloads
 git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
 make -j $(nproc)
