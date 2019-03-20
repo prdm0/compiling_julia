@@ -59,9 +59,14 @@ OPENBLAS_DYNAMIC_ARCH=0" > Make.user
 
 Now, under the cloned directory of [**Julia**](https://julialang.org/), under the version of interest, compile the language doing:
 
-```
+``` 
 cd ~/Downloads/julia
 make -j $(nproc)
+echo "prefix=/opt/julia" >> Make.user
+cd /opt && sudo mkdir julia 
+cd ~/Downloads/julia && make install
+sudo ln -s /opt/julia/bin/julia /usr/local/bin
+julia
 ```
 
 #### Configuring without creating the `Make.user` file:
