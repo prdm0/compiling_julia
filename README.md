@@ -8,11 +8,17 @@
 
 Initially download the [**Julia**](https://julialang.org/) and [**OpenBLAS**](https://www.openblas.net/) (**Open** Optimized **BLAS** Library) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
 
+
+**Note**: 
+
+1. Simply invoking make (or gmake on BSD) will detect the CPU automatically. To set a specific target CPU, use `make TARGET=xxx`, e.g. `make TARGET=HASWELL`. The full target list is in the file **TargetList.txt**.
+2. This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```. The default installation directory is `/opt/OpenBLAS`.
+
 ```
 cd ~/Downloads
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
-make -j $(nproc)
+make TARGET=HASWELL -j $(nproc)
 sudo make install
 ```
 or
@@ -22,14 +28,9 @@ cd ~/Downloads
 git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
 git checkout v0.3.5
-make -j $(nproc)
+make TARGET=HASWELL -j $(nproc)
 sudo make install
 ```
-**Note**: 
-
-1. Simply invoking make (or gmake on BSD) will detect the CPU automatically. To set a specific target CPU, use `make TARGET=xxx`, e.g. `make TARGET=NEHALEM`. The full target list is in the file **TargetList.txt**.
-2. This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```. The default installation directory is `/opt/OpenBLAS`.
-
 
 ## Cloning the Julia Project
 
