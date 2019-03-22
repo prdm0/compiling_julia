@@ -95,7 +95,7 @@ julia
 
 ## Arch Linux distribution and derived Linux distributions
 
-For users of the Arch Linux distribution or derived distributions, if you do not want to compile the [**Julia**](https://julialang.org/) language do:
+For users of the [**Arch Linux**](https://www.archlinux.org/) distribution or derived distributions, if you do not want to compile the [**Julia**](https://julialang.org/) language do:
 
 ```
 yaourt -S openblas-lapack --noconfirm
