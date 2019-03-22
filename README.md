@@ -34,7 +34,7 @@ sudo make install
 
 ## Cloning the Julia Project
 
-Initially do the [**Julia**](https://julialang.org/)  project clone on [**GitHub**](https://github.com/JuliaLang/julia). That way, with git installed and configured, do:
+Initially do the [**Julia**](https://julialang.org/) project clone on [**GitHub**](https://github.com/JuliaLang/julia). That way, with git installed and configured, do:
 
 ```
 cd ~/Downloads/ && git clone git://github.com/JuliaLang/julia.git
@@ -93,4 +93,12 @@ julia
 3. You can always start a bash terminal section with `LD_LIBRARY_PATH` containing the library installation path [**OpenBLAS**](https://www.openblas.net/). To do this, do: `echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc`. This step is not necessary if you performed step 2. You are advised to use step 2 instead than changing the contents of the `~/.bashrc` file.
 4. Make `OPENBLAS_DYNAMIC_ARCH=0` and `MARCH=native` directly in the `Make.inc` file.
 
+## Arch Linux distribution and derived Linux distributions
+
+For users of the Arch Linux distribution or derived distributions, if you do not want to compile the [**Julia**](https://julialang.org/) language do:
+
+```
+yaourt -S openblas-lapack --noconfirm
+sudo pacman -S julia
+```
 
