@@ -68,7 +68,7 @@ cd ~/Downloads/julia
 echo "USE_SYSTEM_XXX=1
 MARCH=native
 LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib
-CPPFLAGS=-I/opt/openblas/include
+CPPFLAGS=-I/opt/OpenBLAS/include
 OPENBLAS_DYNAMIC_ARCH=0
 USE_SYSTEM_BLAS=1
 USE_SYSTEM_LAPACK=1" > Make.user
