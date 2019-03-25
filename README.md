@@ -48,17 +48,28 @@ git tag -l
 git checkout v1.1.0
 ```
 
-Subsequently, have the [**OpenBLAS**](https://www.openblas.net/) library in the `/opt/OpenBLAS/lib/` directory be added to the environment variable `LD_LIBRARY_PATH`. In Linux, the `LD_LIBRARY_PATH` environment variable is a set of colon-separated directories where libraries should be searched first, before the default set of directories. This will cause the [**Julia**](https://julialang.org/) compilation  to consider the [**OpenBLAS**](https://www.openblas.net/) library of the `/opt/OpenBLAS/lib/`.
+```
+
+
+cd /opt/OpenBLAS/lib
+sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so liblapack.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so libcblas.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so libblas.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so.0
+```
 
 
 ## Creating the `Make.user` file
 
-In the cloned directory, create the `Make.user` file with the following content:
+Subsequently, have the [**OpenBLAS**](https://www.openblas.net/) library in the `/opt/OpenBLAS/lib/` directory be added to the environment variable `LD_LIBRARY_PATH`. In Linux, the `LD_LIBRARY_PATH` environment variable is a set of colon-separated directories where libraries should be searched first, before the default set of directories. This will cause the [**Julia**](https://julialang.org/) compilation  to consider the [**OpenBLAS**](https://www.openblas.net/) library of the `/opt/OpenBLAS/lib/`. In the cloned directory, create the `Make.user` file with the following content:
 
 ```
+export LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
+cd $HOME/Downloads/julia
 USE_SYSTEM_XXX=1
 MARCH=native
-LDFLAGS=-Wl,-rpath,/usr/lib64
+LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib
 OPENBLAS_DYNAMIC_ARCH=0
 USE_SYSTEM_BLAS=1
 USE_SYSTEM_LAPACK=1
@@ -66,10 +77,11 @@ USE_SYSTEM_LAPACK=1
 or
 
 ```
-cd ~/Downloads/julia
+export LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
+cd $HOME/Downloads/julia
 echo "USE_SYSTEM_XXX=1
 MARCH=native
-LDFLAGS=-Wl,-rpath,/usr/lib64
+LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib
 OPENBLAS_DYNAMIC_ARCH=0
 USE_SYSTEM_BLAS=1
 USE_SYSTEM_LAPACK=1" > Make.user
@@ -88,14 +100,6 @@ cd /opt && sudo mkdir julia
 cd ~/Downloads/julia && make install
 sudo ln -s /opt/julia/bin/julia /usr/local/bin
 julia
-```
-
-```
-sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so liblapack.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so libcblas.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so libblas.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so.0
 ```
 
 #### Configuring without creating the `Make.user` file:
