@@ -58,8 +58,10 @@ In the cloned directory, create the `Make.user` file with the following content:
 ```
 USE_SYSTEM_XXX=1
 MARCH=native
-LDFLAGS=-Wl,-rpath,/opt/OpenBLAS/lib/
+LDFLAGS=-Wl,-rpath,/usr/lib64
 OPENBLAS_DYNAMIC_ARCH=0
+USE_SYSTEM_BLAS=1
+USE_SYSTEM_LAPACK=1
 ```
 or
 
@@ -67,6 +69,7 @@ or
 cd ~/Downloads/julia
 echo "USE_SYSTEM_XXX=1
 MARCH=native
+LDFLAGS=-Wl,-rpath,/usr/lib64
 OPENBLAS_DYNAMIC_ARCH=0
 USE_SYSTEM_BLAS=1
 USE_SYSTEM_LAPACK=1" > Make.user
