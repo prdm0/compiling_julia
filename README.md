@@ -18,8 +18,8 @@ Initially download the [**Julia**](https://julialang.org/) and [**OpenBLAS**](ht
 cd $HOME/Downloads
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
-make -j $(nproc) PREFIX=/opt/OpenBLAS
-sudo make install
+make -j $(nproc) 
+sudo make install PREFIX=/opt/OpenBLAS
 ```
 or
 
@@ -28,8 +28,8 @@ cd $HOME/Downloads
 git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
 git checkout v0.3.5
-make -j $(nproc) PREFIX=/opt/OpenBLAS
-sudo make install
+make -j $(nproc) 
+sudo make install PREFIX=/opt/OpenBLAS
 ```
 
 ## Cloning the Julia Project
