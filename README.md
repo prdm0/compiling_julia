@@ -63,7 +63,6 @@ git checkout v1.1.0
 Subsequently, have the [**OpenBLAS**](https://www.openblas.net/) library in the `/opt/OpenBLAS/lib/` directory be added to the environment variable `LD_LIBRARY_PATH`. In Linux, the `LD_LIBRARY_PATH` environment variable is a set of colon-separated directories where libraries should be searched first, before the default set of directories. This will cause the [**Julia**](https://julialang.org/) compilation  to consider the [**OpenBLAS**](https://www.openblas.net/) library of the `/opt/OpenBLAS/lib/`. In the cloned directory, create the `Make.user` file with the following content:
 
 ```
-export LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
 cd $HOME/Downloads/julia
 USE_SYSTEM_XXX=1
 MARCH=native
@@ -75,7 +74,6 @@ USE_SYSTEM_LAPACK=1
 or
 
 ```
-export LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
 cd $HOME/Downloads/julia
 echo "USE_SYSTEM_XXX=1
 MARCH=native
@@ -90,8 +88,8 @@ USE_SYSTEM_LAPACK=1" > Make.user
 Now, under the cloned directory of [**Julia**](https://julialang.org/), under the version of interest, compile the language doing:
 
 ``` 
-cd ~/Downloads/julia
-export PATH=/usr/lib64:$PATH
+cd $HOME/Downloads/julia
+export LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
 make -j $(nproc)
 echo "prefix=/opt/julia" >> Make.user
 cd /opt && sudo mkdir julia 
