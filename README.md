@@ -32,6 +32,16 @@ make -j $(nproc)
 sudo make install PREFIX=/opt/OpenBLAS
 ```
 
+
+```
+cd /opt/OpenBLAS/lib
+sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so liblapack.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so libcblas.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so libblas.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so.0
+```
+
 ## Cloning the Julia Project
 
 Initially do the [**Julia**](https://julialang.org/) project clone on [**GitHub**](https://github.com/JuliaLang/julia). That way, with git installed and configured, do:
@@ -47,18 +57,6 @@ After downloading all the project files [**Julia**](https://julialang.org/) clon
 git tag -l
 git checkout v1.1.0
 ```
-
-```
-
-
-cd /opt/OpenBLAS/lib
-sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so liblapack.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so libcblas.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so libblas.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so.0
-```
-
 
 ## Creating the `Make.user` file
 
