@@ -90,6 +90,14 @@ sudo ln -s /opt/julia/bin/julia /usr/local/bin
 julia
 ```
 
+```
+sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so liblapack.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so libcblas.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so libblas.so
+sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so.0
+```
+
 #### Configuring without creating the `Make.user` file:
 
 1. To check the contents of the `LD_LIBRARY_PATH` variable, do `echo $LD_LIBRARY_PATH`.
