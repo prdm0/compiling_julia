@@ -81,6 +81,7 @@ Now, under the cloned directory of [**Julia**](https://julialang.org/), under th
 
 ``` 
 cd ~/Downloads/julia
+export PATH=/usr/lib64:$PATH
 make -j $(nproc)
 echo "prefix=/opt/julia" >> Make.user
 cd /opt && sudo mkdir julia 
