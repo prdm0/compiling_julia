@@ -18,7 +18,7 @@ Initially download the [**Julia**](https://julialang.org/) and [**OpenBLAS**](ht
 cd ~/Downloads
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
-make -j $(nproc)
+make -j $(nproc) PREFIX=/opt/OpenBLAS
 sudo make install
 ```
 or
@@ -28,7 +28,7 @@ cd ~/Downloads
 git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
 git checkout v0.3.5
-make $(nproc)
+make -j $(nproc) PREFIX=/opt/OpenBLAS
 sudo make install
 ```
 
