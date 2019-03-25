@@ -2,7 +2,7 @@
 
 **DEPENDENCES**: git, make, cmake, gcc, gcc-fortran.
 
-**Important**: I'll be at all times assuming that the project [**Julia**](https://julialang.org/) has been cloned into the directory `~/Downloads`. Also, I will consider the `/opt` directory as the installation directory for the [**OpenBLAS**](https://www.openblas.net/) library and of the [**Julia**](https://julialang.org/) language. You can choose a directory of your choice.
+**Important**: I'll be at all times assuming that the project [**Julia**](https://julialang.org/) has been cloned into the directory `$HOME/Downloads`. Also, I will consider the `/opt` directory as the installation directory for the [**OpenBLAS**](https://www.openblas.net/) library and of the [**Julia**](https://julialang.org/) language. You can choose a directory of your choice.
 
 ## Compiling OpenBLAS
 
@@ -15,7 +15,7 @@ Initially download the [**Julia**](https://julialang.org/) and [**OpenBLAS**](ht
 2. This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```. The default installation directory is `/opt/OpenBLAS`.
 
 ```
-cd ~/Downloads
+cd $HOME/Downloads
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
 make -j $(nproc) PREFIX=/opt/OpenBLAS
@@ -24,7 +24,7 @@ sudo make install
 or
 
 ```
-cd ~/Downloads
+cd $HOME/Downloads
 git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
 git checkout v0.3.5
