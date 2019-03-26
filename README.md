@@ -32,13 +32,13 @@ make -j $(nproc)
 sudo make install PREFIX=/opt/OpenBLAS
 ```
 
-### Modificando o diretório /opt/OpenBLAS (Soft Links)
+### Modifying the directory /opt/OpenBLAS (Soft Links)
 
-Para que a compilação da linguagem [**Julia**](https://julialang.org/) proceda corretamente com a linkagem com a biblioteca [**OpenBLAS**](https://www.openblas.net/) instalada no diretório `/opt/`, temos que criar alguns [**soft links**](https://en.wikipedia.org/wiki/Symbolic_link). O diretório `/opt/OpenBLAS/lib` e os links simbólicos deverão estar da sequinte forma:
+In order for the [**Julia**](https://julialang.org/) language compilation  to proceed correctly with the link to the [**OpenBLAS**](https://www.openblas.net/)library installed in the `/opt/` directory, we have to create some [**soft links**](https://en.wikipedia.org/wiki/Symbolic_link). The `/opt/OpenBLAS/lib` directory and symbolic links should be of the following form:
 
-![soft_link_julia](https://raw.githubusercontent.com/prdm0/tempfiles/master/soft_links_julia.png)
+![soft_link_julia](https://raw.githubusercontent.com/prdm0/tempfiles/master/soft_link_julia.png)
 
-Para tanto, é preciso fazer:
+Some of the soft links had already been created with the library installation [**OpenBLAS**](https://www.openblas.net/). To create the remaining symbolic links, do the following:
 
 ```
 cd /opt/OpenBLAS/lib
@@ -47,7 +47,8 @@ sudo ln -sf libopenblas_haswellp-r0.3.5.so libcblas.so
 sudo ln -sf libopenblas_haswellp-r0.3.5.so liblapack.so
 ```
 
-**Note**: É preciso se atentar que o arquivo **libopenblas_haswellp-r0.3.5.so** poderá ter um nome diferente em sua máquina por conta da versão de [**OpenBLAS**](https://www.openblas.net/) e da arquitetura do computador.  Normalmente ele tem nome na forma **libopenblas_xxx**. Se este for o caso, faça a mudança necessário para o nome correto do arquivo.
+**Note**: Note that the **libopenblas_haswellp-r0.3.5.so** file may have a different name on your machine because of the version of [**OpenBLAS**](https://www.openblas.net/) and computer architecture. Usually it has a name in the form **libopenblas_xxx**. If this is the case, make the necessary change in file name.
+
 
 ## Cloning the Julia Project
 
@@ -98,6 +99,7 @@ Now, under the cloned directory of [**Julia**](https://julialang.org/), under th
 cd $HOME/Downloads/julia
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
 make -j $(nproc)
+
 echo "prefix=/opt/julia" >> Make.user
 cd /opt && sudo mkdir julia 
 cd ~/Downloads/julia && make install
