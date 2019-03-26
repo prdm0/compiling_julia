@@ -32,17 +32,22 @@ make -j $(nproc)
 sudo make install PREFIX=/opt/OpenBLAS
 ```
 
+### Modificando o diretório /opt/OpenBLAS (Soft Links)
+
+Para que a compilação da linguagem [**Julia**](https://julialang.org/) proceda corretamente com a linkagem com a biblioteca [**OpenBLAS**](https://www.openblas.net/) instalada no diretório `/opt/`, temos que criar alguns [**soft links**](https://en.wikipedia.org/wiki/Symbolic_link). O diretório `/opt/OpenBLAS/lib` e os links simbólicos deverão estar da sequinte forma:
+
 ![soft_link_julia](https://raw.githubusercontent.com/prdm0/tempfiles/master/soft_links_julia.png)
 
+Para tanto, é preciso fazer:
 
 ```
 cd /opt/OpenBLAS/lib
-sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so liblapack.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so libcblas.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so libblas.so
-sudo ln -s libopenblas_haswellp-r0.3.5.so libopenblas.so.0
+sudo ln -sf libopenblas_haswellp-r0.3.5.so libblas.so
+sudo ln -sf libopenblas_haswellp-r0.3.5.so libcblas.so
+sudo ln -sf libopenblas_haswellp-r0.3.5.so liblapack.so
 ```
+
+**Note**: É preciso se atentar que o arquivo **libopenblas_haswellp-r0.3.5.so** poderá ter um nome diferente em sua máquina por conta da versão de [**OpenBLAS**](https://www.openblas.net/) e da arquitetura do computador.  Normalmente ele tem nome na forma **libopenblas_xxx**. Se este for o caso, faça a mudança necessário para o nome correto do arquivo.
 
 ## Cloning the Julia Project
 
@@ -99,13 +104,6 @@ cd ~/Downloads/julia && make install
 sudo ln -s /opt/julia/bin/julia /usr/local/bin
 julia
 ```
-
-#### Configuring without creating the `Make.user` file:
-
-1. To check the contents of the `LD_LIBRARY_PATH` variable, do `echo $LD_LIBRARY_PATH`.
-2. If the directory where the [**OpenBLAS**](https://www.openblas.net/) library was installed is not present, do `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/`.
-3. You can always start a bash terminal section with `LD_LIBRARY_PATH` containing the library installation path [**OpenBLAS**](https://www.openblas.net/). To do this, do: `echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/OpenBLAS/lib/" >> ~/.bashrc`. This step is not necessary if you performed step 2. You are advised to use step 2 instead than changing the contents of the `~/.bashrc` file.
-4. Make `OPENBLAS_DYNAMIC_ARCH=0` and `MARCH=native` directly in the `Make.inc` file.
 
 ## Arch Linux distribution and derived Linux distributions
 
