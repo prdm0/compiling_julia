@@ -62,7 +62,6 @@ cd julia
 After downloading all the project files [**Julia**](https://julialang.org/) cloned to the computer, go to the version you want to compile, for example the version **v1.1.0**. To know the versions, list all the tags of the language versions of the cloned project (`git tag -l`).
 
 ```
-git tag -l
 git checkout v1.1.0
 ```
 
