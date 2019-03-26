@@ -32,6 +32,8 @@ make -j $(nproc)
 sudo make install PREFIX=/opt/OpenBLAS
 ```
 
+![soft_link_julia](https://raw.githubusercontent.com/prdm0/tempfiles/master/soft_links_julia.png)
+
 
 ```
 cd /opt/OpenBLAS/lib
