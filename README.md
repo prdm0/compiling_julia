@@ -46,11 +46,12 @@ sudo ln -sf libopenblas_haswellp-r0.3.5.so libblas.so
 sudo ln -sf libopenblas_haswellp-r0.3.5.so libcblas.so
 sudo ln -sf libopenblas_haswellp-r0.3.5.so liblapack.so
 sudo cp -a lib* /usr/lib64
+sudo cp -a lib* /usr/lib
 ```
 
 **Note**: 
 
-1 - Make sure that there is no installed version of blas, lapack and OpenBLAS in `/usr`. The command `cp -a lib * /usr/ib64` will copy the compiled OpenBLAS library files along with the symbolic links created so they can be used throughout the system.
+1 - Make sure that there is no installed version of blas, lapack and OpenBLAS in `/usr`. The command `cp -a lib *` will copy the compiled OpenBLAS library files along with the symbolic links created so they can be used throughout the system.
 
 2 - Note that the **libopenblas_haswellp-r0.3.5.so** file may have a different name on your machine because of the version of [**OpenBLAS**](https://www.openblas.net/) and computer architecture. Usually it has a name in the form **libopenblas_xxx**. If this is the case, make the necessary change in file name.
 
@@ -80,6 +81,7 @@ cd $HOME/Downloads/julia
 USE_SYSTEM_XXX=1
 MARCH=native
 LDFLAGS=-Wl,-rpath,/usr/lib64
+LDFLAGS+=-Wl,-rpath,/usr/lib
 LDFLAGS+=-Wl,-rpath,/opt/OpenBLAS/lib
 OPENBLAS_DYNAMIC_ARCH=0
 USE_SYSTEM_BLAS=1
@@ -92,6 +94,7 @@ cd $HOME/Downloads/julia
 echo "USE_SYSTEM_XXX=1
 MARCH=native
 LDFLAGS=-Wl,-rpath,/usr/lib64
+LDFLAGS+=-Wl,-rpath,/usr/lib64
 LDFLAGS+=-Wl,-rpath,/opt/OpenBLAS/lib
 OPENBLAS_DYNAMIC_ARCH=0
 USE_SYSTEM_BLAS=1
