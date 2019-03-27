@@ -113,7 +113,7 @@ echo "prefix=/opt/julia" >> Make.user
 cd /opt 
 sudo mkdir julia 
 cd $HOME/Downloads/julia
-make install
+sudo make install
 sudo ln -sf /opt/julia/bin/julia /usr/local/bin
 julia
 ```
