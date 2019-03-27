@@ -110,9 +110,11 @@ cd $HOME/Downloads/julia
 make -j $(nproc)
 
 echo "prefix=/opt/julia" >> Make.user
-cd /opt && sudo mkdir julia 
-cd ~/Downloads/julia && make install
-sudo ln -s /opt/julia/bin/julia /usr/local/bin
+cd /opt 
+sudo mkdir julia 
+cd $HOME/Downloads/julia
+make install
+sudo ln -sf /opt/julia/bin/julia /usr/local/bin
 julia
 ```
 
