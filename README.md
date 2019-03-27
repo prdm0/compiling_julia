@@ -94,7 +94,7 @@ cd $HOME/Downloads/julia
 echo "USE_SYSTEM_XXX=1
 MARCH=native
 LDFLAGS=-Wl,-rpath,/usr/lib64
-LDFLAGS+=-Wl,-rpath,/usr/lib64
+LDFLAGS+=-Wl,-rpath,/usr/lib
 LDFLAGS+=-Wl,-rpath,/opt/OpenBLAS/lib
 OPENBLAS_DYNAMIC_ARCH=0
 USE_SYSTEM_BLAS=1
