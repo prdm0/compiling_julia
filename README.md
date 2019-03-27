@@ -48,7 +48,12 @@ sudo ln -sf libopenblas_haswellp-r0.3.5.so liblapack.so
 sudo cp -a lib* /usr/lib64
 ```
 
-**Note**: Note that the **libopenblas_haswellp-r0.3.5.so** file may have a different name on your machine because of the version of [**OpenBLAS**](https://www.openblas.net/) and computer architecture. Usually it has a name in the form **libopenblas_xxx**. If this is the case, make the necessary change in file name.
+**Note**: 
+
+1 - Make sure that there is no installed version of blas, lapack and OpenBLAS in `/usr`. The command `cp -a lib * /usr/ib64` will copy the compiled OpenBLAS library files along with the symbolic links created so they can be used throughout the system.
+
+2 - Note that the **libopenblas_haswellp-r0.3.5.so** file may have a different name on your machine because of the version of [**OpenBLAS**](https://www.openblas.net/) and computer architecture. Usually it has a name in the form **libopenblas_xxx**. If this is the case, make the necessary change in file name.
+
 
 
 ## Cloning the Julia Project
