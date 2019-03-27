@@ -107,7 +107,6 @@ Now, under the cloned directory of [**Julia**](https://julialang.org/), under th
 
 ``` 
 cd $HOME/Downloads/julia
-export LD_LIBRARY_PATH=/opt/OpenBLAS/lib:$LD_LIBRARY_PATH
 make -j $(nproc)
 
 echo "prefix=/opt/julia" >> Make.user
