@@ -1,6 +1,13 @@
 # Instructions for compiling Julia language with OpenBLAS (GNU/Linux)
 
-**DEPENDENCES**: git, make, cmake, gcc, gcc-fortran, patch.
+## DEPENDENCES: 
+
+* git
+* make
+* cmake
+* gcc
+* gcc-fortran
+* patch. 
 
 **Important**: I'll be at all times assuming that the project [**Julia**](https://julialang.org/) has been cloned into the directory `$HOME/Downloads`. Also, I will consider the `/opt` directory as the installation directory for the [**OpenBLAS**](https://www.openblas.net/) library and of the [**Julia**](https://julialang.org/) language. You can choose a directory of your choice.
 
