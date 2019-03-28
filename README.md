@@ -1,6 +1,6 @@
 # Instructions for compiling Julia language with OpenBLAS (GNU/Linux)
 
-## DEPENDENCES: 
+### DEPENDENCES: 
 
 * git
 * make
