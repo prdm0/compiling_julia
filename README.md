@@ -131,6 +131,6 @@ For users of the [**Arch Linux**](https://www.archlinux.org/) distribution or de
 
 ```
 yaourt -S openblas-lapack --noconfirm
-sudo pacman -S julia
+yaourt -S julia-git --noconfirm
 ```
 
