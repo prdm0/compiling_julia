@@ -1,6 +1,6 @@
 # Instructions for compiling Julia language with OpenBLAS (GNU/Linux)
 
-**IMPORTANT**: Be sure to remove all versions of [**BLAS**](http://www.netlib.org/blas/), [**Lapack**](http://www.netlib.org/lapack/) and [**OpenBLAS**](https://www.openblas.net/) installed in `/usr/lib` and `/usr/lib64`.
+**IMPORTANT**: Be sure to remove all versions of [**BLAS**](http://www.netlib.org/blas/), [**LAPACK**](http://www.netlib.org/lapack/) and [**OpenBLAS**](https://www.openblas.net/) installed in `/usr/lib` and `/usr/lib64`.
 
 ### DEPENDENCES: 
 
