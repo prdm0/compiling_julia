@@ -125,12 +125,5 @@ sudo ln -sf /opt/julia/bin/julia /usr/bin
 julia
 ```
 
-## Arch Linux distribution and derived Linux distributions
-
-For users of the [**Arch Linux**](https://www.archlinux.org/) distribution or derived distributions, if you do not want to compile the [**Julia**](https://julialang.org/) language do:
-
-```
-yaourt -S openblas-lapack --noconfirm
-yaourt -S julia-git --noconfirm
-```
+**Note**: In my tests, the procedure of compiling [**OpenBLAS**](https://www.openblas.net/) separately and later compiling the [**Julia**](https://julialang.org/) language provided greater computational efficiency.
 
