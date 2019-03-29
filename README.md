@@ -121,7 +121,7 @@ cd /opt
 sudo mkdir julia 
 cd $HOME/Downloads/julia
 sudo make install
-sudo ln -sf /opt/julia/bin/julia /usr/local/bin
+sudo ln -sf /opt/julia/bin/julia /usr/bin
 julia
 ```
 
