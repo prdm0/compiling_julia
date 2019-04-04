@@ -131,17 +131,17 @@ julia
 
 ## Atom Editor/IDE for Julia language
 
-Para programar em Julia aconselho o uso do editor de programação Atom. O Atom, por meio do plugin **uber-juno** pode se transformar no [**Juno**](http://junolab.org/), esta sendo a IDE de programação para a linguagem Julia. Para o uso do Juno, instale o [**Atom**](https://atom.io/) e posteriomente, em uma seção do Atom, aperte simultaneamente `Ctrl + ,`. Isso fará com que uma aba de configurações seja aberta. Depois, clique em **+Install** e digite na busca **uber-juno** e instale-o.
+To program in Julia I recommend using the Atom programming editor. Atom, through the **uber-juno** plugin, can become [**Juno**](http://junolab.org/), a programming IDE for the Julia language. To use Juno, install the [**Atom**](https://atom.io/) and later, in an Atom section, simultaneously press `Ctrl +,`. This will cause a settings tab to open. Then click in **+Install** and type in the **uber-juno** search and install it.
 
-**Note**: Uma vez que o há um soft link do binário **julia** em **/usr/bin**, o Atom identificará facilmente, grarantindo assim que utilizaremos a versão de Julia que compilamos com os passos anteriores.
+**Note**: Since there is a soft link to [**Julia**](https://julialang.org/) in **/usr/bin**, the atom will identify with ease, thus ensuring that we will use the version of Julia that was compiled following the previous steps.
 
-Algumas vantagens do Atom/Juno como IDE de programação para Julia são:
+Some advantages of Atom / Juno as IDE for programming in Julia language are:
 
-1. É Open Source;
-2. É Hakeável, tendo assim uma grande comunidade desenvolvendo ferramentas e melhorias;
-3. Foi criado pela comunidade do GitHub, tendo assim uma fácil integração com o sistema de versionamente git;
-4. Há muitos temas de fácil instalação;
-5. Há muitos pacotes úteis para programadores.
+1. It is Open Source;
+2. A large community developing tools and improvements;
+3. It was created by the GitHub community, thus having an easy integration with the git version system;
+4. There are many easy-to-install themes;
+5. There are many useful packages for programmers.
 
 
 <p align="center">
@@ -150,11 +150,8 @@ Algumas vantagens do Atom/Juno como IDE de programação para Julia são:
 Juno IDE for programming in Julia language              
 </p>
 
-Além do pugin **uber-juno**, outros pugins úteis poderão ser instalados. Tais plugins estão enumerados abaixo:
+In addition to the **uber-juno** pugin, other useful pugins may be installed. Such plugins are listed below:
 
-1. 
-
-
-
-
-
+1. "**Ask Stack**": Plugin to search Stack Overflow. Make `Ctrl + Alt + a`;
+2. "**Git-Plus**": Features function for git usage;
+3. "**File-Icons**": Add icons in the files in the tree view;
