@@ -133,6 +133,7 @@ julia
 
 Para programar em Julia aconselho o uso do editor de programação Atom. O Atom, por meio do plugin **uber-juno** pode se transformar no [**Juno**](http://junolab.org/), esta sendo a IDE de programação para a linguagem Julia. Para o uso do Juno, instale o [**Atom**](https://atom.io/) e posteriomente, em uma seção do Atom, aperte simultaneamente `Ctrl + ,`. Isso fará com que uma aba de configurações seja aberta. Depois, clique em **+Install** e digite na busca **uber-juno** e instale-o.
 
+**Note**: Uma vez que o há um soft link do binário **julia** em **/usr/bin**, o Atom identificará facilmente, grarantindo assim que utilizaremos a versão de Julia que compilamos com os passos anteriores.
 
 Algumas vantagens do Atom são:
 
