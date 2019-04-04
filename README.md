@@ -135,8 +135,11 @@ Para programar em Julia aconselho o uso do editor de programação Atom. O Atom,
 
 **Note**: Uma vez que o há um soft link do binário **julia** em **/usr/bin**, o Atom identificará facilmente, grarantindo assim que utilizaremos a versão de Julia que compilamos com os passos anteriores.
 
-Algumas vantagens do Atom são:
+Algumas vantagens do Atom/Juno como IDE de programação para Julia são:
 
-1 - É OpenSource
-2 - É hakeavel
+1 - É Open Source;
+2 - É Hakeável, tendo assim uma grande comunidade desenvolvendo ferramentas e melhorias;
+3 - Foi criado pela comunidade do GitHub, tendo assim uma fácil integração com o sistema de versionamente git;
+4 - Há muitos temas de fácil instalação;
+5 - Há muitos pacotes úteis para programadores.
 
