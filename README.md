@@ -129,7 +129,7 @@ julia
 
 **Note**: In my tests, the procedure of compiling [**OpenBLAS**](https://www.openblas.net/) separately and later compiling the [**Julia**](https://julialang.org/) language provided greater computational efficiency.
 
-## Atom Editor
+## Atom Editor/IDE for Julia language
 
 Para programar em Julia aconselho o uso do editor de programação Atom. O Atom, por meio do plugin **uber-juno** pode se transformar no [**Juno**](http://junolab.org/), esta sendo a IDE de programação para a linguagem Julia. Para o uso do Juno, instale o [**Atom**](https://atom.io/) e posteriomente, em uma seção do Atom, aperte simultaneamente `Ctrl + ,`. Isso fará com que uma aba de configurações seja aberta. Depois, clique em **+Install** e digite na busca **uber-juno** e instale-o.
 
