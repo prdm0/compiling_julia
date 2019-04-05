@@ -143,7 +143,6 @@ Some advantages of Atom / Juno as IDE for programming in Julia language are:
 4. There are many easy-to-install themes;
 5. There are many useful packages for programmers.
 
-
 <p align="center">
 <img src="https://raw.githubusercontent.com/prdm0/tempfiles/master/juno.png" height="400" width="800">
 </br>
